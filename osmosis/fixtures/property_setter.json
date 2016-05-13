@@ -1,6 +1,32 @@
 [
  {
   "default_value": null, 
+  "doc_type": "Purchase Receipt", 
+  "docstatus": 0, 
+  "doctype": "Property Setter", 
+  "doctype_or_field": "DocField", 
+  "field_name": "naming_series", 
+  "modified": "2016-05-13 10:47:41.737987", 
+  "name": "Purchase Receipt-naming_series-options", 
+  "property": "options", 
+  "property_type": "Text", 
+  "value": "PREC-\nPREC-RET-"
+ }, 
+ {
+  "default_value": null, 
+  "doc_type": "Supplier", 
+  "docstatus": 0, 
+  "doctype": "Property Setter", 
+  "doctype_or_field": "DocField", 
+  "field_name": "naming_series", 
+  "modified": "2016-05-13 10:49:41.143657", 
+  "name": "Supplier-naming_series-options", 
+  "property": "options", 
+  "property_type": "Text", 
+  "value": "SUPP-"
+ }, 
+ {
+  "default_value": null, 
   "doc_type": "Opportunity", 
   "docstatus": 0, 
   "doctype": "Property Setter", 
@@ -2130,5 +2156,18 @@
   "property": "read_only_onload", 
   "property_type": "Check", 
   "value": null
+ }, 
+ {
+  "default_value": null, 
+  "doc_type": "Quotation", 
+  "docstatus": 0, 
+  "doctype": "Property Setter", 
+  "doctype_or_field": "DocType", 
+  "field_name": null, 
+  "modified": "2016-05-13 13:29:08.065369", 
+  "name": "Quotation-default_print_format", 
+  "property": "default_print_format", 
+  "property_type": "Data", 
+  "value": "custom_quot"
  }
 ]
