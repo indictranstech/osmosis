@@ -126,6 +126,7 @@
   "print_format_builder": 0, 
   "print_format_type": "Server", 
   "standard": "Yes"
+<<<<<<< HEAD
  }, 
  {
   "css": null, 
@@ -142,5 +143,7 @@
   "print_format_builder": 0, 
   "print_format_type": "Server", 
   "standard": "No"
+=======
+>>>>>>> 2a1b6f8bf8a0f2c4a2bd9cc5ba9e3408164f2331
  }
 ]
