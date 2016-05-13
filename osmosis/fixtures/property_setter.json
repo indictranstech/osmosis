@@ -1,7 +1,6 @@
 [
  {
   "default_value": null, 
-<<<<<<< HEAD
   "doc_type": "Purchase Receipt", 
   "docstatus": 0, 
   "doctype": "Property Setter", 
@@ -28,8 +27,6 @@
  }, 
  {
   "default_value": null, 
-=======
->>>>>>> 2a1b6f8bf8a0f2c4a2bd9cc5ba9e3408164f2331
   "doc_type": "Opportunity", 
   "docstatus": 0, 
   "doctype": "Property Setter", 
@@ -2159,7 +2156,6 @@
   "property": "read_only_onload", 
   "property_type": "Check", 
   "value": null
-<<<<<<< HEAD
  }, 
  {
   "default_value": null, 
@@ -2173,7 +2169,5 @@
   "property": "default_print_format", 
   "property_type": "Data", 
   "value": "custom_quot"
-=======
->>>>>>> 2a1b6f8bf8a0f2c4a2bd9cc5ba9e3408164f2331
  }
 ]
