@@ -332,7 +332,8 @@ def customer_details(customer):
 	cust=frappe.get_doc("Customer",customer)
 	society= cust.society_name
 	suburb=cust.suburb
-	info=[society,suburb]
+	client_id=cust.client_id
+	info=[society,suburb,client_id]
 	return info
 
 @frappe.whitelist()

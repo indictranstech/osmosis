@@ -25,6 +25,7 @@ frappe.ui.form.on("Maintenance Schedule","customer" ,function(frm){
 				if(r.message){
 					frm.set_value("society_name", r.message[0]);
 					frm.set_value("suburb", r.message[1]);
+					frm.set_value("client_id", r.message[2]);
 				}
 			}
 		});
@@ -41,6 +42,7 @@ frappe.ui.form.on("Sales Order","customer" ,function(frm){
 				if(r.message){					
 					frm.set_value("society_name", r.message[0]);
 					frm.set_value("suburb", r.message[1]);
+					frm.set_value("client_id", r.message[2]);
 				}
 				
 			}
@@ -60,6 +62,7 @@ frappe.ui.form.on("Customer","onload",function(frm){
 	frm.add_fetch('lead_name', 'area', 'area');
 	frm.add_fetch('lead_name', 'society_name', 'society_name');
 	frm.add_fetch('lead_name', 'suburb', 'suburb');
+	frm.add_fetch('lead_name', 'client_id', 'client_id');
 })
 
 //fetch fields from customer on creating quotation from customer
@@ -68,13 +71,24 @@ frappe.ui.form.on("Quotation","onload",function(frm){
 	frm.add_fetch('project_title', 'customer', 'customer');
 	frm.add_fetch('customer', 'society_name', 'society_name');
 	frm.add_fetch('lead', 'society_name', 'society_name');
+	frm.add_fetch('customer', 'client_id', 'client_id');
 })
 
 frappe.ui.form.on("Opportunity","onload",function(frm){
 	frm.add_fetch('customer', 'society_name', 'society_name');
 	frm.add_fetch('lead', 'society_name', 'society_name');
+	frm.add_fetch('lead', 'client_id', 'client_id');
 })
 
+frappe.ui.form.on("Maintenance Schedule","onload",function(frm){
+	/*frm.add_fetch('lead_name', 'area', 'area');*/
+	frm.add_fetch('customer', 'society_name', 'society_name');
+	frm.add_fetch('customer', 'suburb', 'suburb');
+	frm.add_fetch('customer', 'client_id', 'client_id');
+})
+frappe.ui.form.on("Maintenance Visit","onload",function(frm){
+	frm.add_fetch('customer', 'client_id', 'client_id');
+})
 //button on sales order for extra sales order
 cur_frm.cscript.custom_refresh = function(doc, cdt, cdn) {
 	if(doc.doctype=="Sales Order" && doc.is_extra_sales_order && doc.__islocal){
