@@ -146,6 +146,7 @@ def make_customer(doc,customer_group):
 	cust.territory=doc.get('territory')
 	cust.society_name=doc.get('society_name')
 	cust.customer_group=customer_group
+	cust.client_id=lead_data.client_id
 	cust.save(ignore_permissions=True)
 	frappe.msgprint(_("Customer '{0}' created successfully").format(cust.customer_name))
 
