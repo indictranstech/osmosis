@@ -14,6 +14,7 @@ def create_project(doc, method):
 		project.sales_order=doc.name
 		project.expected_start_date=doc.transaction_date
 		project.customer=doc.customer
+		project.client_id=doc.client_id
 		project.save(ignore_permissions=True)
 		doc.project_name=doc.project_title
 		frappe.db.set_value("Sales Order",doc.name,"project_name",doc.project_title)
