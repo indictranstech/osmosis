@@ -35,5 +35,5 @@ def auto_status_update_ms(doc, method):
 		doc.amc_guarantee_valid_upto_date=guarntee
 		doc.amc_status = "AMC"
 
-	if doc.transaction_date > doc.installation_date:
-	    frappe.throw("Installation Date Should be Greater Than Equal To Transaction Date")
+	if getdate(doc.transaction_date) > getdate(doc.installation_date):
+		frappe.throw("Transaction Date Should be Greater Than Equal To Installation Date")
