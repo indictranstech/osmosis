@@ -89,6 +89,9 @@ frappe.ui.form.on("Maintenance Schedule","onload",function(frm){
 frappe.ui.form.on("Maintenance Visit","onload",function(frm){
 	frm.add_fetch('customer', 'client_id', 'client_id');
 })
+frappe.ui.form.on("Sales Invoice","onload",function(frm){
+	frm.add_fetch('customer', 'client_id', 'client_id');
+})
 //button on sales order for extra sales order
 cur_frm.cscript.custom_refresh = function(doc, cdt, cdn) {
 	if(doc.doctype=="Sales Order" && doc.is_extra_sales_order && doc.__islocal){
