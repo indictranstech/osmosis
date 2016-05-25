@@ -387,3 +387,10 @@ def item_taxes_with_profit(item_code):
 	total_tax=item_taxes+tempate_tax_rate
 
 	return{"tax":total_tax,"amount":tempate_tax_amount,"profit":profit,"margin":margin}
+
+def autoname_lead(doc, method):
+	conf = frappe.get_doc("Configuration","Configuration")
+	count = conf.count or 1
+	doc.client_id = "%s-%s-%s-%s"%(doc.society_name, doc.area, doc.suburb, count)
+	conf.count = count + 1
+	conf.save(ignore_permissions=True)

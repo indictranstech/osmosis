@@ -131,6 +131,9 @@ doc_events = {
 	"Employee": {
 		"autoname": "osmosis.custom_methods.employee_autoname"
 	},
+	"Lead": {
+		"before_insert": "osmosis.custom_methods.autoname_lead"
+	},
 	"Attendance": {
 		"validate": "osmosis.custom_methods.time_validation"
 	},
